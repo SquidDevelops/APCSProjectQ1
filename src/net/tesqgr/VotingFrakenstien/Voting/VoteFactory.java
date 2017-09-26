@@ -2,12 +2,12 @@ package net.tesqgr.VotingFrakenstien.Voting;
 
 public class VoteFactory {
 
-    public static Vote createRepublicanVote(VoteAPI voteAPI){
-       return new Vote(VoteType.REPUBLICAN, voteAPI);
+    public static RepublicanVote createRepublicanVote(VoteAPI voteAPI){
+       return new RepublicanVote(voteAPI);
     }
 
-    public static Vote createDemocratVote(VoteAPI voteAPI){
-        return new Vote(VoteType.DEMOCRAT, voteAPI);
+    public static DemocratVote createDemocratVote(VoteAPI voteAPI){
+        return new DemocratVote(voteAPI);
     }
 
 

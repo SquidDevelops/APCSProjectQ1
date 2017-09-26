@@ -9,7 +9,9 @@ public class VoteAPI {
     private String dCanidate;
     private String rCanidate;
 
-    private List<Vote> rVotes, dVotes;
+
+
+    protected List<Vote> rVotes, dVotes;
 
     public String getdCanidate() {
         return dCanidate;
@@ -17,6 +19,14 @@ public class VoteAPI {
 
     public String getrCanidate() {
         return rCanidate;
+    }
+
+    public double getdBias() {
+        return dBias;
+    }
+
+    public double getrBias() {
+        return rBias;
     }
 
     public VoteAPI(double dBias, double rBias, String dCanidate, String rCanidate){
@@ -28,4 +38,5 @@ public class VoteAPI {
         rVotes = new ArrayList<Vote>();
         dVotes = new ArrayList<Vote>();
     }
+
 }
