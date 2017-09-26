@@ -36,7 +36,7 @@ public class VoteAPI {
      * @param dBias The bias towards the Democrat party, 1 is a no bias system
      * @param rBias The bias towards the Republican party, 1 is a no bias system
      * @param dCanidate The Democratic party's chosen canidate for this election
-     *
+     * @param rCanidate The Republican party's chosen canidate for this election
      **/
     public VoteAPI(double dBias, double rBias, String dCanidate, String rCanidate){
         this.dBias = dBias;
