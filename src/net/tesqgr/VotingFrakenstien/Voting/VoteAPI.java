@@ -29,6 +29,15 @@ public class VoteAPI {
         return rBias;
     }
 
+    /**
+     * A constructor for the VoteAPI that creates an instance of the vote system
+     * <p>
+     * This class should be stored nonstaticly at runtime and kept for any action on the vote machine
+     * @param dBias The bias towards the Democrat party, 1 is a no bias system
+     * @param rBias The bias towards the Republican party, 1 is a no bias system
+     * @param dCanidate The Democratic party's chosen canidate for this election
+     *
+     **/
     public VoteAPI(double dBias, double rBias, String dCanidate, String rCanidate){
         this.dBias = dBias;
         this.rBias = rBias;
