@@ -4,7 +4,7 @@ public class Vote {
     private VoteType voteType;
     private long timeStamp;
 
-    public Vote(VoteType voteType){
+    public Vote(VoteType voteType, VoteAPI voteAPI){
         this.timeStamp = System.currentTimeMillis();
         this.voteType = voteType;
     }
