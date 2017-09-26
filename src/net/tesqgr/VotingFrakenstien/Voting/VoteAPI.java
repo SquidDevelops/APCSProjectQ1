@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class VoteAPI {
+
     private double dBias;
     private double rBias;
     private String dCanidate;
@@ -13,10 +14,17 @@ public class VoteAPI {
 
     protected List<Vote> rVotes, dVotes;
 
+    /**
+     * This method returns the current canidate for the Democratic
+     * @return String Democratic Canidate
+     */
     public String getdCanidate() {
         return dCanidate;
     }
-
+    /**
+     * This method returns the current canidate for the Republican
+     * @return String Republican canidate
+     */
     public String getrCanidate() {
         return rCanidate;
     }
@@ -37,6 +45,8 @@ public class VoteAPI {
      * @param rBias The bias towards the Republican party, 1 is a no bias system
      * @param dCanidate The Democratic party's chosen canidate for this election
      * @param rCanidate The Republican party's chosen canidate for this election
+     *
+     * @author Ezekiel George
      **/
     public VoteAPI(double dBias, double rBias, String dCanidate, String rCanidate){
         this.dBias = dBias;
