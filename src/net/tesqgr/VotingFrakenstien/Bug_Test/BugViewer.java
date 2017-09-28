@@ -13,7 +13,7 @@ public class BugViewer
         frame.setTitle("Two Bugs");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        Bug_Test component = new Bug_Test();
+        BugTest component = new BugTest();
         frame.add(component);
 
         frame.setVisible(true);

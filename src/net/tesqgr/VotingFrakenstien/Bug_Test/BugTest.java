@@ -3,7 +3,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import javax.swing.JComponent;
 
-public class Bug_Test extends JComponent
+public class BugTest extends JComponent
 {
     public void paintComponent(Graphics g)
     {
