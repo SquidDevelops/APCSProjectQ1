@@ -33,13 +33,17 @@ public class VoteAPI {
     }
 
     /**
-     *
-     * @return Returns the bias of the democraric
+     * This method returns a double of a bias value to the democratic party, 1.0 being a no bias party
+     * @return Returns the bias of the Democratic party
      */
     public double getdBias() {
         return dBias;
     }
 
+    /**
+     * This method returns a double of a bias value to the republican party, 1.0 being a no bias party
+     * @return Returns the bias of the Republican party
+     */
     public double getrBias() {
         return rBias;
     }
