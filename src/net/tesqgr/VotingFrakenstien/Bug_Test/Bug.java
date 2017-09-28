@@ -10,6 +10,26 @@ public class Bug
     private int xLeft;
     private int yTop;
 
+    public int getxLeft()
+    {
+        return xLeft;
+    }
+
+    public void setxLeft(int xLeft)
+    {
+        this.xLeft = xLeft;
+    }
+
+    public int getyTop()
+    {
+        return yTop;
+    }
+
+    public void setyTop(int yTop)
+    {
+        this.yTop = yTop;
+    }
+
     public Bug(int x, int y)
     {
         xLeft = x;
@@ -44,6 +64,10 @@ public class Bug
         g2.draw(frontWindshield);
         g2.draw(roofTop);
         g2.draw(rearWindshield);
+    }
+    public void translate(Graphics2D g2)
+    {
+        g2.translate(6, 7);
     }
 }
 
