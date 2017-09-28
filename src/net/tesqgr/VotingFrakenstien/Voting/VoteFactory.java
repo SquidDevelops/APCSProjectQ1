@@ -10,5 +10,7 @@ public class VoteFactory {
         return new DemocratVote(voteAPI);
     }
 
+    public static void addDemocratVotes(VoteAPI voteAPI)
+
 
 }
