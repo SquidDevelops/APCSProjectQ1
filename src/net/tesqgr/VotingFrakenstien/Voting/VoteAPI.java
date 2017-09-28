@@ -3,6 +3,9 @@ package net.tesqgr.VotingFrakenstien.Voting;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Ezekiel George
+ */
 public class VoteAPI {
 
     private double dBias;
@@ -29,10 +32,18 @@ public class VoteAPI {
         return rCanidate;
     }
 
+    /**
+     * This method returns a double of a bias value to the democratic party, 1.0 being a no bias party
+     * @return Returns the bias of the Democratic party
+     */
     public double getdBias() {
         return dBias;
     }
 
+    /**
+     * This method returns a double of a bias value to the republican party, 1.0 being a no bias party
+     * @return Returns the bias of the Republican party
+     */
     public double getrBias() {
         return rBias;
     }
