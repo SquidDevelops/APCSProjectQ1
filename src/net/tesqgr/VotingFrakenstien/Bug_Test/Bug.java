@@ -1,4 +1,6 @@
 package net.tesqgr.VotingFrakenstien.Bug_Test;
+import net.tesqgr.VotingFrakenstien.Voting.VoteAPI;
+
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.awt.geom.Ellipse2D;
@@ -9,6 +11,7 @@ public class Bug
 {
     private int xLeft;
     private int yTop;
+
 
     public int getxLeft()
     {
@@ -65,7 +68,7 @@ public class Bug
         g2.draw(roofTop);
         g2.draw(rearWindshield);
     }
-    public void translate(Graphics2D g2)
+    public void translate(Graphics2D g2, VoteAPI voteAPI)
     {
         g2.translate(6, 7);
     }
