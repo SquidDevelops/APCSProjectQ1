@@ -1,5 +1,6 @@
 package net.tesqgr.VotingFrakenstien.Bug_Test;
 import net.tesqgr.VotingFrakenstien.Voting.VoteAPI;
+import net.tesqgr.VotingFrakenstien.Voting.VoteUtils;
 
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
@@ -70,6 +71,7 @@ public class Bug
     }
     public void translate(Graphics2D g2, VoteAPI voteAPI)
     {
+        System.out.println(voteAPI.getdCanidate());
         g2.translate(6, 7);
     }
 }
