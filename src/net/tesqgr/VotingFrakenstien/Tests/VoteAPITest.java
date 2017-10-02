@@ -1,5 +1,7 @@
 package net.tesqgr.VotingFrakenstien.Tests;
 
+import net.tesqgr.VotingFrakenstien.Constants;
+import net.tesqgr.VotingFrakenstien.Voting.Vote;
 import net.tesqgr.VotingFrakenstien.Voting.VoteAPI;
 import net.tesqgr.VotingFrakenstien.Voting.VoteFactory;
 import net.tesqgr.VotingFrakenstien.Voting.VoteUtils;
@@ -13,6 +15,16 @@ public class VoteAPITest {
         VoteFactory.createDemocratVote(voteapi);
         VoteFactory.createRepublicanVote(voteapi);
         assert(VoteUtils.countDemocratVotes(voteapi) == 1 && VoteUtils.countRepublicanVotes(voteapi) == 1);
+    }
+
+    @Test
+    public void testIfDemocraticVotesBiased(){
+        VoteAPI voteAPI = new VoteAPI(2, 1, "Jason Ramos", "Jason Unramos");
+        VoteFactory.createDemocratVote(voteAPI);
+        assert(VoteUtils.countDemocratVotes(voteAPI) == 2);
+        VoteFactory.createDemocratVote(voteAPI);
+        assert (VoteUtils.countDemocratVotes(voteAPI) == 4);
+        assert(VoteUtils.countVotes(voteAPI)[Constants.DEMOCRAT_INDEX] == 4);
     }
 
 
