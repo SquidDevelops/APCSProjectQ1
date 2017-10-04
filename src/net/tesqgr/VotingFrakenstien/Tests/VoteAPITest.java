@@ -26,6 +26,16 @@ public class VoteAPITest {
         assert (VoteUtils.countDemocratVotes(voteAPI) == 4);
         assert(VoteUtils.countVotes(voteAPI)[Constants.DEMOCRAT_INDEX] == 4);
     }
+    
+    @Test
+    public void testIfRepublicanVotesBiased(){
+        VoteAPI voteAPI = new VoteAPI(1, 2, "Jason Ramos", "Jason Unramos");
+        VoteFactory.createRepublicanVote(voteAPI);
+        assert(VoteUtils.countRepublicanVotes(voteAPI) == 2);
+        VoteFactory.createRepublicanVote(voteAPI);
+        assert (VoteUtils.countRepublicanVotes(voteAPI) == 4);
+        assert(VoteUtils.countVotes(voteAPI)[Constants.REPUBLICAN_INDEX] == 4);
+    }
 
 
 
