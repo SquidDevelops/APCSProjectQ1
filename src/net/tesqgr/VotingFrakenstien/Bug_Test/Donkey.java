@@ -1,6 +1,7 @@
 package net.tesqgr.VotingFrakenstien.Bug_Test;
 import net.tesqgr.VotingFrakenstien.Voting.VoteAPI;
 import net.tesqgr.VotingFrakenstien.Voting.VoteUtils;
+import net.tesqgr.VotingFrakenstien.Voting.VoteFactory;
 
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
@@ -8,7 +9,7 @@ import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 import java.awt.geom.Point2D;
 
-public class Bug
+public class Donkey
 {
     private int xLeft;
     private int yTop;
@@ -34,7 +35,7 @@ public class Bug
         this.yTop = yTop;
     }
 
-    public Bug(int x, int y)
+    public Donkey(int x, int y)
     {
         xLeft = x;
         yTop = y;
@@ -71,8 +72,16 @@ public class Bug
     }
     public void translate(Graphics2D g2, VoteAPI voteAPI)
     {
-        System.out.println(voteAPI.getdCanidate());
-        g2.translate(6, 7);
+        //System.out.println(voteAPI.getdCanidate());
+        VoteFactory.createVotes(4, 8, voteAPI);
+        if (VoteUtils.countDemocratVotes(voteAPI) > 5)
+        {
+            g2.translate(6, 7);
+        }
+        else
+        {
+            g2.translate(8, 8);
+        }
     }
 }
 
