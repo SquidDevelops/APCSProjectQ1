@@ -1,4 +1,4 @@
-package net.tesqgr.VotingFrakenstien;/*Luke Judy
+package net.tesqgr.VotingFrakenstien.Components;/*Luke Judy
 Period 5
 9/28/17*/
 

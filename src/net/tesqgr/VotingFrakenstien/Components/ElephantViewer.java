@@ -1,7 +1,7 @@
 /*Luke Judy
 Period 5
 9/28/17*/
-package net.tesqgr.VotingFrakenstien;
+package net.tesqgr.VotingFrakenstien.Components;
 
 import javax.swing.JFrame;
 
