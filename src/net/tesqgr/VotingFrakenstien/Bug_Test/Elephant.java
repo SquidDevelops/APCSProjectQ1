@@ -9,7 +9,7 @@ import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 import java.awt.geom.Point2D;
 
-public class Donkey
+public class Elephant
 {
     private int xLeft;
     private int yTop;
@@ -35,7 +35,7 @@ public class Donkey
         this.yTop = yTop;
     }
 
-    public Donkey(int x, int y)
+    public Elephant(int x, int y)
     {
         xLeft = x;
         yTop = y;
@@ -74,14 +74,6 @@ public class Donkey
     {
         //System.out.println(voteAPI.getdCanidate());
         VoteFactory.createVotes(4, 8, voteAPI);
-        if (VoteUtils.countDemocratVotes(voteAPI) > 5)
-        {
-            g2.translate(6, 7);
-        }
-        else
-        {
-            g2.translate(8, 8);
-        }
         if (VoteUtils.countDemocratVotes(voteAPI) > 5)
         {
             g2.translate(6, 7);
