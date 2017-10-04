@@ -1,7 +1,5 @@
 package net.tesqgr.VotingFrakenstien.Voting;
 
-import net.tesqgr.VotingFrakenstien.Constants;
-
 import java.util.ArrayList;
 import java.util.List;
 

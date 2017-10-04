@@ -25,7 +25,6 @@ public class Vote {
     }
 
     /**
-     *
      * @return The UNIX time stamp
      */
     public long getTimeStamp() {
