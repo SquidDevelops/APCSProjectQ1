@@ -15,7 +15,7 @@ public class VoteTest extends JComponent
         VoteAPI voteAPI = new VoteAPI(1, 1, "Memes", "Memer");
         int x = getWidth() - 60;
         int y = getHeight() - 30;
-        Elephant bug2 = new Elephant(x, y);
+        Elephant bug2 = new Elephant(500 ,500);
         bug1.translate(g2,voteAPI);
         bug1.draw(g2);
         bug2.translate(g2, voteAPI);
