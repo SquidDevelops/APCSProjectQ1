@@ -15,14 +15,18 @@ public class VoteViewer
         VoteAPI voteAPI = new VoteAPI(1, 1, "Memes", "Memer");
         JPanel jPanel = new JPanel();
         frame.get().setSize(600,600);
+        jPanel.setBounds(frame.get().getBounds());
         frame.get().setTitle("Two Bugs");
         frame.get().setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jPanel.setLayout(null);
         JButton jButton = new JButton();
-        jButton.add(jButton);
         jButton.setLocation(500,500);
-        jButton.addActionListener(e -> VoteFactory.createVotes(6,0, VoteAPI voteAPI));
+        jButton.setSize(30, 30);
+        jButton.addActionListener(e -> VoteFactory.createVotes(6,0, voteAPI));
+        jPanel.add(jButton);
         VoteTest component = new VoteTest();
-        frame.get().add(component);
+        jPanel.add(component);
+        //frame.get().add(component);
         frame.get().add(jPanel);
         frame.get().setVisible(true);
     }
