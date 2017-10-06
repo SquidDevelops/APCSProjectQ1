@@ -10,7 +10,7 @@ public class VoteViewer
     {
         AtomicReference<JFrame> frame = new AtomicReference<>(new JFrame());
 
-        frame.get().setSize(1200,1200);
+        frame.get().setSize(600,600);
         frame.get().setTitle("Two Bugs");
         frame.get().setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
