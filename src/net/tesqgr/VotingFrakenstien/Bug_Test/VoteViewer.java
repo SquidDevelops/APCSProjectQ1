@@ -12,6 +12,7 @@ public class VoteViewer
     public static void main(String[] args)
     {
         AtomicReference<JFrame> frame = new AtomicReference<>(new JFrame());
+        VoteAPI voteAPI = new VoteAPI(1, 1, "Memes", "Memer");
         JPanel jPanel = new JPanel();
         frame.get().setSize(600,600);
         frame.get().setTitle("Two Bugs");
@@ -19,7 +20,7 @@ public class VoteViewer
         JButton jButton = new JButton();
         jButton.add(jButton);
         jButton.setLocation(500,500);
-        jButton.addActionListener(e -> VoteFactory.createVotes(6,0, VoteAPI));
+        jButton.addActionListener(e -> VoteFactory.createVotes(6,0, VoteAPI voteAPI));
         VoteTest component = new VoteTest();
         frame.get().add(component);
         frame.get().add(jPanel);
