@@ -8,6 +8,7 @@ import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 import java.awt.geom.Point2D;
 import java.awt.geom.QuadCurve2D;
+import.java
 
 public class Donkey
 {
@@ -105,19 +106,19 @@ public class Donkey
     {
         //System.out.println(voteAPI.getdCanidate());
         VoteFactory.createVotes(4, 8, voteAPI);
-        int lastVotes = 0;
-        Thread t  = new Thread
+        Thread t  = new Thread(() ->
         {
-            while(true)
+            int lastVotes = 0;
+            while (true)
             {
                 if (lastVotes < VoteUtils.countDemocratVotes(voteAPI))
                 {
-                    g2.translate(20 , 0);
+                    g2.translate(20, 0);
                     lastVotes = (int) VoteUtils.countDemocratVotes(voteAPI);
                 }
                 else
                 {
-                    g2.translate(0,0);
+                    g2.translate(0, 0);
                 }
                 if (lastVotes < VoteUtils.countRepublicanVotes(voteAPI))
                 {
@@ -129,7 +130,8 @@ public class Donkey
                     g2.translate(0, 0);
                 }
             }
-        }
+        });
+        t.start();
 
     }
 }
