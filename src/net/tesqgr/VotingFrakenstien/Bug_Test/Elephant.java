@@ -99,14 +99,33 @@ public class Elephant
     {
         //System.out.println(voteAPI.getdCanidate());
         VoteFactory.createVotes(4, 8, voteAPI);
-        if (VoteUtils.countDemocratVotes(voteAPI) > 5)
+        Thread t  = new Thread(() ->
         {
-            g2.translate(6, 7);
-        }
-        else
-        {
-            g2.translate(8, 8);
-        }
+            int lastVotes = 0;
+            while (true)
+            {
+                if (lastVotes < VoteUtils.countDemocratVotes(voteAPI))
+                {
+                    g2.translate(20, 0);
+                    lastVotes = (int) VoteUtils.countDemocratVotes(voteAPI);
+                }
+                else
+                {
+                    g2.translate(0, 0);
+                }
+                if (lastVotes < VoteUtils.countRepublicanVotes(voteAPI))
+                {
+                    g2.translate(20, 0);
+                    lastVotes = (int) VoteUtils.countRepublicanVotes(voteAPI);
+                }
+                else
+                {
+                    g2.translate(0, 0);
+                }
+            }
+        });
+        t.start();
+
     }
 }
 
