@@ -3,11 +3,12 @@ import net.tesqgr.VotingFrakenstien.Voting.VoteAPI;
 import net.tesqgr.VotingFrakenstien.Voting.VoteUtils;
 import net.tesqgr.VotingFrakenstien.Voting.VoteFactory;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.Line2D;
 import java.awt.geom.QuadCurve2D;
 
-public class Elephant
+public class Elephant extends JComponent
 {
     private int xLeft;
     private int yTop;
@@ -37,7 +38,15 @@ public class Elephant
     {
         xLeft = x;
         yTop = y;
+        setPreferredSize(new Dimension(300, 300));
     }
+
+
+    @Override
+    public void paintComponent(Graphics g){
+        draw((Graphics2D)g);
+    }
+
     public void draw(Graphics2D g2)
     {
         // Recover Graphics2D
