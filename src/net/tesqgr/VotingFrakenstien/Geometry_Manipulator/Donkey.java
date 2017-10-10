@@ -1,12 +1,10 @@
-package net.tesqgr.VotingFrakenstien.Bug_Test;
+package net.tesqgr.VotingFrakenstien.Geometry_Manipulator;
 import net.tesqgr.VotingFrakenstien.Voting.VoteAPI;
 import net.tesqgr.VotingFrakenstien.Voting.VoteUtils;
 import net.tesqgr.VotingFrakenstien.Voting.VoteFactory;
 
 import java.awt.*;
-import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
-import java.awt.geom.Point2D;
 import java.awt.geom.QuadCurve2D;
 
 
