@@ -11,14 +11,14 @@ public class VoteTest extends JComponent
     public void paintComponent(Graphics g)
     {
         Graphics2D g2 = (Graphics2D) g;
-        Donkey bug1 = new Donkey(0, 100);
+        Donkey donkey = new Donkey(0, 100);
         VoteAPI voteAPI = new VoteAPI(1, 1, "Memes", "Memer");
         int x = getWidth() - 60;
         int y = getHeight() - 30;
-        Elephant bug2 = new Elephant(0 ,300);
-        bug1.translate(g2,voteAPI);
-        bug1.draw(g2);
-        bug2.translate(g2, voteAPI);
-        bug2.draw(g2);
+        Elephant elephant = new Elephant(0 ,300);
+        donkey.translate(g2,voteAPI);
+        donkey.draw(g2);
+        elephant.translate(g2, voteAPI);
+        elephant.draw(g2);
     }
 }

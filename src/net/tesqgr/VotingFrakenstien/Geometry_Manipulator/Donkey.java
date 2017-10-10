@@ -45,7 +45,7 @@ public class Donkey
         g2.setColor(Color.BLUE);
 
         // Draw text
-        g2.drawString("Democrats",20,60);
+        //g2.drawString("Democrats",20,60);
 
         // Draw legs
         Line2D.Double leg1 = new Line2D.Double(xLeft + 10,yTop + 70,xLeft + 10,yTop + 120);
@@ -98,6 +98,7 @@ public class Donkey
         g2.draw(head6);
         g2.draw(head7);
         g2.draw(head8);
+
 
     }
     public void translate(Graphics2D g2, VoteAPI voteAPI)
