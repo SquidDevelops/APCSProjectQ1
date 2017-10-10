@@ -14,7 +14,6 @@ public class VotingFrakenstien {
         AtomicReference<JFrame> frame = new AtomicReference<>(new JFrame());
         JPanel jPanel = new JPanel();
         VoteAPI voteapi = new VoteAPI(1, 1, "Jason Ramos", "Jason Unramos");
-
         frame.get().setSize(800, 500);
         frame.get().setTitle("your mom");
         frame.get().setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
