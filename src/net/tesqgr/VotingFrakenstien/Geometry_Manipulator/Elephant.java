@@ -136,7 +136,8 @@ public class Elephant {
         g2.draw(trunk4);
     }
 
-    public void translate(Graphics2D g2, VoteAPI voteAPI) {
+    public void translate(Graphics2D g2, VoteAPI voteAPI) throws InterruptedException
+    {
         //System.out.println(voteAPI.getdCanidate());
         VoteFactory.createVotes(4, 8, voteAPI);
         Thread t = new Thread(() ->
@@ -157,6 +158,13 @@ public class Elephant {
                     lastVotes = (int) VoteUtils.countRepublicanVotes(voteAPI);
                 } else {
 
+                }
+                try
+                {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e)
+                {
+                    e.printStackTrace();
                 }
             }
         });
