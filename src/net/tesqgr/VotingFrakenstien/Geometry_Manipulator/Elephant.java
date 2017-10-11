@@ -33,6 +33,7 @@ public class Elephant
     {
         this.yTop = yTop;
     }
+
     /*Line2D.Double leg1;
     Line2D.Double leg2;
     Line2D.Double leg3;
@@ -140,7 +141,7 @@ public class Elephant
         g2.draw(trunk3);
         g2.draw(trunk4);
     }
-    public void translate(Graphics2D g2, VoteAPI voteAPI)
+    public void translate(Graphics2D g2, VoteAPI voteAPI) throws InterruptedException
     {
         //System.out.println(voteAPI.getdCanidate());
         VoteFactory.createVotes(4, 8, voteAPI);
@@ -149,15 +150,6 @@ public class Elephant
             int lastVotes = 0;
             while (true)
             {
-                if (lastVotes < VoteUtils.countDemocratVotes(voteAPI))
-                {
-                    g2.translate(20, 0);
-                    lastVotes = (int) VoteUtils.countDemocratVotes(voteAPI);
-                }
-                else
-                {
-                    g2.translate(0, 0);
-                }
                 if (lastVotes < VoteUtils.countRepublicanVotes(voteAPI))
                 {
                     g2.translate(20, 0);
@@ -167,8 +159,17 @@ public class Elephant
                 {
                     g2.translate(0, 0);
                 }
+                try
+                {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e)
+                {
+                    e.printStackTrace();
+                }
             }
+
         });
+
         t.start();
 
     }

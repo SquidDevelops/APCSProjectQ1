@@ -16,9 +16,21 @@ public class VoteTest extends JComponent
         int x = getWidth() - 60;
         int y = getHeight() - 30;
         Elephant elephant = new Elephant(0 ,300);
-        donkey.translate(g2,voteAPI);
+        try
+        {
+            donkey.translate(g2,voteAPI);
+        } catch (InterruptedException e)
+        {
+            e.printStackTrace();
+        }
         donkey.draw(g2);
-        elephant.translate(g2, voteAPI);
+        try
+        {
+            elephant.translate(g2, voteAPI);
+        } catch (InterruptedException e)
+        {
+            e.printStackTrace();
+        }
         elephant.draw(g2);
     }
 

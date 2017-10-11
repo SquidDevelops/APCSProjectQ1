@@ -101,7 +101,7 @@ public class Donkey
 
 
     }
-    public void translate(Graphics2D g2, VoteAPI voteAPI)
+    public void translate(Graphics2D g2, VoteAPI voteAPI) throws InterruptedException
     {
         //System.out.println(voteAPI.getdCanidate());
         VoteFactory.createVotes(40, 20, voteAPI);
@@ -119,17 +119,16 @@ public class Donkey
                 {
                     g2.translate(0, 0);
                 }
-                if (lastVotes < VoteUtils.countRepublicanVotes(voteAPI))
+                try
                 {
-                    g2.translate(20, 0);
-                    lastVotes = (int) VoteUtils.countRepublicanVotes(voteAPI);
-                }
-                else
+                    Thread.sleep(1000);
+                } catch (InterruptedException e)
                 {
-                    g2.translate(0, 0);
+                    e.printStackTrace();
                 }
             }
         });
+        Thread.sleep(1000);
         t.start();
 
     }
