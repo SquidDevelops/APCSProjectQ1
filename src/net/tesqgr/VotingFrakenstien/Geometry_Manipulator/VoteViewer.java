@@ -24,10 +24,12 @@ public class VoteViewer
         jButton.setLocation(700,700);
         jButton.setSize(30, 30);
         jButton.addActionListener(e -> VoteFactory.createVotes(6,2, voteAPI));
+        jButton.addActionListener(e -> frame.get().add(component));
         frame.get().getContentPane().add(jButton);
         frame.get().add(component);
         frame.get().setVisible(true);
-        /*while(true)
+
+        while(true)
         {
             System.out.println(voteUtils.countDemocratVotes(voteAPI));
             System.out.println(voteUtils.countRepublicanVotes(voteAPI));
@@ -38,7 +40,7 @@ public class VoteViewer
             {
                 e.printStackTrace();
             }
-        } */
+        }
     }
 
 }

@@ -21,4 +21,5 @@ public class VoteTest extends JComponent
         elephant.translate(g2, voteAPI);
         elephant.draw(g2);
     }
+
 }
