@@ -84,6 +84,7 @@ public class Donkey {
     public void draw(Graphics2D g2) {
 
         g2.setColor(Color.BLUE);
+        g2.drawString("Democrats", xLeft + 20, yTop + 60);
 
 
         // Draw legs
