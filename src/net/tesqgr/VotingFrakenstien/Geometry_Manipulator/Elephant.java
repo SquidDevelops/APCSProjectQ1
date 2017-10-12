@@ -13,6 +13,9 @@ public class Elephant {
     private int xLeft;
     private int yTop;
 
+    private String mum = "mum";
+
+    private int lastVotes = 0;
 
     public int getxLeft() {
         return xLeft;
@@ -92,8 +95,8 @@ public class Elephant {
         leg4 = new Line2D.Double(xLeft + 90, yTop + 90, xLeft + 90, yTop + 120);
         leg5 = new Line2D.Double(xLeft + 90, yTop + 120, xLeft + 120, yTop + 120);
         leg6 = new Line2D.Double(xLeft + 120, yTop + 120, xLeft + 120, yTop + 80);
-        tail2 = new Line2D.Double(xLeft + 0, yTop + 70, xLeft + 10, yTop + 60);
-        tail1 = new Line2D.Double(xLeft + 10, yTop + 70, xLeft + 0, yTop + 70);
+        tail2 = new Line2D.Double(xLeft , yTop + 70, xLeft + 10, yTop + 60);
+        tail1 = new Line2D.Double(xLeft + 10, yTop + 70, xLeft, yTop + 70);
         body1 = new Line2D.Double(xLeft + 10, yTop + 60, xLeft + 10, yTop + 50);
         body6 = new Line2D.Double(xLeft + 140, yTop + 50, xLeft + 140, yTop + 80);
         body2 = new QuadCurve2D.Double(xLeft + 10, yTop + 50, xLeft + 15, yTop + 30, xLeft + 20, yTop + 30);
@@ -105,6 +108,7 @@ public class Elephant {
         trunk4 = new Line2D.Double(xLeft + 170, yTop + 80, xLeft + 160, yTop + 80);
         trunk2 = new QuadCurve2D.Double(xLeft + 140, yTop + 80, xLeft + 150, yTop + 100, xLeft + 160, yTop + 80);
         trunk3 = new QuadCurve2D.Double(xLeft + 130, yTop + 100, xLeft + 150, yTop + 120, xLeft + 170, yTop + 80);
+
 
         g2.draw(leg1);
         g2.draw(leg2);
@@ -134,44 +138,27 @@ public class Elephant {
         g2.draw(trunk2);
         g2.draw(trunk3);
         g2.draw(trunk4);
+        System.out.println("ur mum gay asf nigga : " + xLeft + " : " + leg1.x1);
     }
 
-    public void translate(Graphics2D g2, VoteAPI voteAPI) throws InterruptedException
-    {
+    public Graphics2D translate(Graphics2D g2, VoteAPI voteAPI) {
         //System.out.println(voteAPI.getdCanidate());
-        VoteFactory.createVotes(4, 8, voteAPI);
-        Thread t = new Thread(() ->
-        {
-            int lastVotes = 0;
-            while (true) {
-                if (lastVotes < VoteUtils.countDemocratVotes(voteAPI)) {
-                    xLeft += 20;
-                    draw(g2);
-                    lastVotes = (int) VoteUtils.countDemocratVotes(voteAPI);
-                } else {
-                    xLeft += 20;
-                    draw(g2);
-                }
-                if (lastVotes < VoteUtils.countRepublicanVotes(voteAPI)) {
-                    xLeft += 20;
-                    draw(g2);
-                    lastVotes = (int) VoteUtils.countRepublicanVotes(voteAPI);
-                } else {
+        //VoteFactory.createVotes(4, 8, voteAPI);
 
-                }
-                try
-                {
-                    Thread.sleep(1000);
-                } catch (InterruptedException e)
-                {
-                    e.printStackTrace();
-                }
-            }
-        });
-        t.start();
 
+        if (lastVotes < VoteUtils.countRepublicanVotes(voteAPI)) {
+            xLeft += 100;
+            System.out.println("Last Votes : " + lastVotes + " : " + VoteUtils.countRepublicanVotes(voteAPI));
+            draw(g2);
+           // draw(g2);
+            lastVotes = (int) Math.round(VoteUtils.countRepublicanVotes(voteAPI));
+        }
+return g2;
     }
+
+
 }
+
 
 
 
