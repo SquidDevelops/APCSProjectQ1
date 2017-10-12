@@ -4,20 +4,20 @@ import net.tesqgr.VotingFrakenstien.Components.DemocratButton;
 import net.tesqgr.VotingFrakenstien.Components.RepublicanButton;
 import net.tesqgr.VotingFrakenstien.Components.VoteAnimals;
 import net.tesqgr.VotingFrakenstien.Voting.VoteAPI;
-import net.tesqgr.VotingFrakenstien.Voting.VoteUtils;
 
 import javax.swing.*;
 import java.awt.*;
 import java.util.concurrent.atomic.AtomicReference;
 //import java.awt.*;
 
-public class VotingFrankenstien implements Runnable
-{
+public class VotingFrankenstien {
     public static VoteAPI voteAPI = new VoteAPI(1, 1, "George", "Ryan");
-    private static AtomicReference<JFrame> frame = new AtomicReference<>(new JFrame());
+    public static AtomicReference<JFrame> frame = new AtomicReference<>(new JFrame());
+
+    private static boolean hasWon;
+
 
     public static void main(String[] args) throws InterruptedException {
-
 
         VoteAnimals component = new VoteAnimals();
         frame.get().setSize(800, 800);
@@ -33,12 +33,20 @@ public class VotingFrankenstien implements Runnable
 
     }
 
-    @Override
-    public void run() {
-        if (VoteUtils.countDemocratVotes(voteAPI) >= 10) {
-            //TODO: Buisness logic for Democrat win goes here
-        } else if (VoteUtils.countRepublicanVotes(voteAPI) >= 10) {
-            //TODO: Buisness logic for republican win goes here
-        }
+    public static void republicanWin() {
+        //TODO:Logic
+        System.out.println("R win");
+        if (!hasWon)
+            frame.get().getContentPane().setBackground(Color.RED);
+        hasWon = true;
     }
+
+    public static void democratWin() {
+        //TODO:Logic
+        System.out.println("d win");
+        if (!hasWon)
+            frame.get().getContentPane().setBackground(Color.BLUE);
+        hasWon = true;
+    }
+
 }
