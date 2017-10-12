@@ -13,22 +13,6 @@ public class Elephant {
 
     private int lastVotes = 0;
 
-    public int getxLeft() {
-        return xLeft;
-    }
-
-    public void setxLeft(int xLeft) {
-        this.xLeft = xLeft;
-    }
-
-    public int getyTop() {
-        return yTop;
-    }
-
-    public void setyTop(int yTop) {
-        this.yTop = yTop;
-    }
-
     Line2D.Double leg1;
     Line2D.Double leg2;
     Line2D.Double leg3;
