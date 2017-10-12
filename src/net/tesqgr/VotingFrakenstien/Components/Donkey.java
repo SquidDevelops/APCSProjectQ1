@@ -1,8 +1,7 @@
-package net.tesqgr.VotingFrakenstien.Geometry_Manipulator;
+package net.tesqgr.VotingFrakenstien.Components;
 
 import net.tesqgr.VotingFrakenstien.Voting.VoteAPI;
 import net.tesqgr.VotingFrakenstien.Voting.VoteUtils;
-import net.tesqgr.VotingFrakenstien.Voting.VoteFactory;
 
 import java.awt.*;
 import java.awt.geom.Line2D;

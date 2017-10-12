@@ -1,10 +1,8 @@
-package net.tesqgr.VotingFrakenstien.Geometry_Manipulator;
+package net.tesqgr.VotingFrakenstien.Components;
 
 import net.tesqgr.VotingFrakenstien.Voting.VoteAPI;
 import net.tesqgr.VotingFrakenstien.Voting.VoteUtils;
-import net.tesqgr.VotingFrakenstien.Voting.VoteFactory;
 
-import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.Line2D;
 import java.awt.geom.QuadCurve2D;
@@ -84,7 +82,7 @@ public class Elephant {
         g2.setColor(Color.RED);
 
         // Draw text
-        g2.drawString("Republicans", xLeft + 35,yTop + 50);
+        g2.drawString("Republicans", xLeft + 35, yTop + 50);
 
         // Draw legs
         leg2 = new Line2D.Double(xLeft + 10, yTop + 120, xLeft + 40, yTop + 120);
