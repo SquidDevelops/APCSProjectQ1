@@ -12,24 +12,6 @@ import java.awt.geom.QuadCurve2D;
 public class Donkey {
     private int xLeft;
     private int yTop;
-
-
-    public int getxLeft() {
-        return xLeft;
-    }
-
-    public void setxLeft(int xLeft) {
-        this.xLeft = xLeft;
-    }
-
-    public int getyTop() {
-        return yTop;
-    }
-
-    public void setyTop(int yTop) {
-        this.yTop = yTop;
-    }
-
     private int lastVotes;
     Line2D.Double leg1;
     Line2D.Double leg2;

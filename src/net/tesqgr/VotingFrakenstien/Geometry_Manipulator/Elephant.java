@@ -12,25 +12,7 @@ import java.awt.geom.QuadCurve2D;
 public class Elephant {
     private int xLeft;
     private int yTop;
-
     private int lastVotes = 0;
-
-    public int getxLeft() {
-        return xLeft;
-    }
-
-    public void setxLeft(int xLeft) {
-        this.xLeft = xLeft;
-    }
-
-    public int getyTop() {
-        return yTop;
-    }
-
-    public void setyTop(int yTop) {
-        this.yTop = yTop;
-    }
-
     Line2D.Double leg1;
     Line2D.Double leg2;
     Line2D.Double leg3;
@@ -79,8 +61,7 @@ public class Elephant {
 
 
     public void draw(Graphics2D g2) {
-        // Recover Graphics2D
-        //Graphics2D g2 = (Graphics2D);
+        //Set Color
         g2.setColor(Color.RED);
 
         // Draw text
