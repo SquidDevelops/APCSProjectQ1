@@ -27,7 +27,7 @@ public class VoteTest extends JComponent implements Runnable {
     public void run() {
         while (isVisible()) {
             elephant.translate(g22, VoteViewer.voteAPI);
-
+//            /donkey.translate(g22, VoteViewer.voteAPI);
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
