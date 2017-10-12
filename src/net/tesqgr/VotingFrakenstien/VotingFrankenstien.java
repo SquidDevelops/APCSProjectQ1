@@ -35,16 +35,12 @@ public class VotingFrankenstien {
     }
 
     public static void republicanWin() {
-        //TODO:Logic
-        System.out.println("R win");
         if (!hasWon)
             frame.get().getContentPane().setBackground(Color.RED);
         hasWon = true;
     }
 
     public static void democratWin() {
-        //TODO:Logic
-        System.out.println("d win");
         if (!hasWon)
             frame.get().getContentPane().setBackground(Color.BLUE);
         hasWon = true;
