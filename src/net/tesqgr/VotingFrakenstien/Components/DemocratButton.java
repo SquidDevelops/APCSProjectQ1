@@ -7,7 +7,7 @@ import net.tesqgr.VotingFrakenstien.Voting.VoteUtils;
 import javax.swing.*;
 
 public class DemocratButton extends JButton {
-    public DemocratButton(String text, VoteAPI voteAPI) {
+    public DemocratButton(VoteAPI voteAPI) {
         super("Vote Democrat");
         this.addActionListener(e -> {
             VoteFactory.createDemocratVote(voteAPI);

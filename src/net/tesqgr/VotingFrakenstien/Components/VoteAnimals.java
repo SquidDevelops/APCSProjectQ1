@@ -1,19 +1,17 @@
-package net.tesqgr.VotingFrakenstien.Geometry_Manipulator;
+package net.tesqgr.VotingFrakenstien.Components;
 
-import net.tesqgr.VotingFrakenstien.Voting.VoteAPI;
+import net.tesqgr.VotingFrakenstien.VoteViewer;
 
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.geom.Line2D;
-import javax.swing.JComponent;
+import javax.swing.*;
+import java.awt.*;
 
-public class VoteTest extends JComponent implements Runnable {
-    private Elephant elephant = new Elephant(100, 300);
-    private Donkey donkey = new Donkey(100, 300);
+public class VoteAnimals extends JComponent implements Runnable {
+    private Elephant elephant = new Elephant(100, 400);
+    private Donkey donkey = new Donkey(100, 200);
     private Graphics2D g22;
 
 
-    public VoteTest() {
+    public VoteAnimals() {
         start();
     }
 
