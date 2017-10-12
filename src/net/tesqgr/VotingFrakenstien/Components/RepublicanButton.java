@@ -8,7 +8,7 @@ import javax.swing.*;
 
 public class RepublicanButton extends JButton {
     public RepublicanButton(VoteAPI voteAPI) {
-        super("Vote nigga");
+        super("Vote Republican");
         this.addActionListener(e -> {
             VoteFactory.createRepublicanVote(voteAPI);
             System.out.println("demo vote" + VoteUtils.countRepublicanVotes(voteAPI));

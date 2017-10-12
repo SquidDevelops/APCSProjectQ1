@@ -1,11 +1,15 @@
 package net.tesqgr.VotingFrakenstien.Geometry_Manipulator;
 
+import net.tesqgr.VotingFrakenstien.Components.DemocratButton;
+import net.tesqgr.VotingFrakenstien.Components.RepublicanButton;
 import net.tesqgr.VotingFrakenstien.Components.ljDonkey;
 import net.tesqgr.VotingFrakenstien.Voting.VoteFactory;
 import net.tesqgr.VotingFrakenstien.Voting.VoteAPI;
 import net.tesqgr.VotingFrakenstien.Voting.VoteUtils;
 
 import javax.swing.*;
+import javax.swing.border.Border;
+import java.awt.*;
 import java.util.concurrent.atomic.AtomicReference;
 //import java.awt.*;
 
@@ -19,11 +23,11 @@ public class VoteViewer {
         frame.get().setSize(800, 800);
         frame.get().setTitle("Two Parties");
         frame.get().setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        JButton jButton = new JButton();
-        jButton.setLocation(400, 400);
-        jButton.setSize(30, 30);
-        jButton.addActionListener(e -> VoteFactory.createVotes(6, 2, voteAPI));
-        frame.get().getContentPane().add(jButton);
+
+
+        frame.get().getContentPane().add(new DemocratButton("vote", voteAPI), BorderLayout.WEST);
+        frame.get().getContentPane().add(new RepublicanButton(voteAPI), BorderLayout.EAST);
+        frame.get().getContentPane().setBackground(Color.BLACK);
         frame.get().add(component);
         frame.get().setVisible(true);
 

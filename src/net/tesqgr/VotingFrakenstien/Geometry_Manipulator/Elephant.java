@@ -93,7 +93,7 @@ public class Elephant {
         leg4 = new Line2D.Double(xLeft + 90, yTop + 90, xLeft + 90, yTop + 120);
         leg5 = new Line2D.Double(xLeft + 90, yTop + 120, xLeft + 120, yTop + 120);
         leg6 = new Line2D.Double(xLeft + 120, yTop + 120, xLeft + 120, yTop + 80);
-        tail2 = new Line2D.Double(xLeft , yTop + 70, xLeft + 10, yTop + 60);
+        tail2 = new Line2D.Double(xLeft, yTop + 70, xLeft + 10, yTop + 60);
         tail1 = new Line2D.Double(xLeft + 10, yTop + 70, xLeft, yTop + 70);
         body1 = new Line2D.Double(xLeft + 10, yTop + 60, xLeft + 10, yTop + 50);
         body6 = new Line2D.Double(xLeft + 140, yTop + 50, xLeft + 140, yTop + 80);
@@ -140,7 +140,7 @@ public class Elephant {
 
     public void translate(Graphics2D g2, VoteAPI voteAPI) {
         if (lastVotes < VoteUtils.countRepublicanVotes(voteAPI)) {
-            xLeft += 100;
+            xLeft += 50;
             lastVotes = (int) Math.ceil(VoteUtils.countRepublicanVotes(voteAPI));
         }
     }
