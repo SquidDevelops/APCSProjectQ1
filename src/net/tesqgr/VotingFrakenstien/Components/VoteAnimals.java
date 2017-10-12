@@ -1,6 +1,6 @@
 package net.tesqgr.VotingFrakenstien.Components;
 
-import net.tesqgr.VotingFrakenstien.VoteViewer;
+import net.tesqgr.VotingFrakenstien.VotingFrankenstien;
 
 import javax.swing.*;
 import java.awt.*;
@@ -25,8 +25,8 @@ public class VoteAnimals extends JComponent implements Runnable {
     @Override
     public void run() {
         while (isVisible()) {
-            elephant.translate(g22, VoteViewer.voteAPI);
-            donkey.translate(g22, VoteViewer.voteAPI);
+            elephant.translate(g22, VotingFrankenstien.voteAPI);
+            donkey.translate(g22, VotingFrankenstien.voteAPI);
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {

@@ -10,7 +10,8 @@ import java.awt.*;
 import java.util.concurrent.atomic.AtomicReference;
 //import java.awt.*;
 
-public class VoteViewer {
+public class VotingFrankenstien
+{
     public static VoteAPI voteAPI = new VoteAPI(1, 1, "George", "Ryan");
 
     public static void main(String[] args) throws InterruptedException {
