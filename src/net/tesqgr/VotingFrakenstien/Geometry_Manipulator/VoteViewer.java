@@ -27,18 +27,6 @@ public class VoteViewer {
         frame.get().add(component);
         frame.get().setVisible(true);
 
-        // while(true)
-        // {
-        //    System.out.println(voteUtils.countDemocratVotes(voteAPI));
-        //   System.out.println(voteUtils.countRepublicanVotes(voteAPI));
-        ////  try
-        //    {
-        //      Thread.sleep(1000);
-        // } catch (InterruptedException e)
-        // {
-        //    e.printStackTrace();
-        // }
-        //  }
     }
 
 }

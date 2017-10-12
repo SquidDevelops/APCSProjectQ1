@@ -13,8 +13,6 @@ public class Elephant {
     private int xLeft;
     private int yTop;
 
-    private String mum = "mum";
-
     private int lastVotes = 0;
 
     public int getxLeft() {
@@ -138,22 +136,13 @@ public class Elephant {
         g2.draw(trunk2);
         g2.draw(trunk3);
         g2.draw(trunk4);
-        System.out.println("ur mum gay asf nigga : " + xLeft + " : " + leg1.x1);
     }
 
-    public Graphics2D translate(Graphics2D g2, VoteAPI voteAPI) {
-        //System.out.println(voteAPI.getdCanidate());
-        //VoteFactory.createVotes(4, 8, voteAPI);
-
-
+    public void translate(Graphics2D g2, VoteAPI voteAPI) {
         if (lastVotes < VoteUtils.countRepublicanVotes(voteAPI)) {
             xLeft += 100;
-            System.out.println("Last Votes : " + lastVotes + " : " + VoteUtils.countRepublicanVotes(voteAPI));
-            draw(g2);
-           // draw(g2);
-            lastVotes = (int) Math.round(VoteUtils.countRepublicanVotes(voteAPI));
+            lastVotes = (int) Math.ceil(VoteUtils.countRepublicanVotes(voteAPI));
         }
-return g2;
     }
 
 
