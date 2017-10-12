@@ -24,11 +24,12 @@ public class VotingFrankenstien {
         frame.get().setTitle("Two Parties");
         frame.get().setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-
         frame.get().getContentPane().add(new DemocratButton(voteAPI), BorderLayout.WEST);
         frame.get().getContentPane().add(new RepublicanButton(voteAPI), BorderLayout.EAST);
         frame.get().getContentPane().setBackground(Color.BLACK);
+
         frame.get().add(component);
+
         frame.get().setVisible(true);
 
     }
