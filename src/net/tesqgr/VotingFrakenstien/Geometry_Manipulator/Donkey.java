@@ -143,7 +143,7 @@ public class Donkey {
 
     public void translate(Graphics2D g2, VoteAPI voteAPI) {
         if (lastVotes < VoteUtils.countDemocratVotes(voteAPI)) {
-            xLeft += 50;
+            xLeft += 0x32;
             lastVotes = (int) Math.round(VoteUtils.countDemocratVotes(voteAPI));
         }
     }

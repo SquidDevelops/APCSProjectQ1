@@ -140,7 +140,7 @@ public class Elephant {
 
     public void translate(Graphics2D g2, VoteAPI voteAPI) {
         if (lastVotes < VoteUtils.countRepublicanVotes(voteAPI)) {
-            xLeft += 50;
+            xLeft += 0x32;
             lastVotes = (int) Math.ceil(VoteUtils.countRepublicanVotes(voteAPI));
         }
     }

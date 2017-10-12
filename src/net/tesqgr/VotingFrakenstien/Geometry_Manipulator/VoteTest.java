@@ -8,8 +8,8 @@ import java.awt.geom.Line2D;
 import javax.swing.JComponent;
 
 public class VoteTest extends JComponent implements Runnable {
-    private Elephant elephant = new Elephant(100, 300);
-    private Donkey donkey = new Donkey(100, 300);
+    private Elephant elephant = new Elephant(100, 400);
+    private Donkey donkey = new Donkey(100, 200);
     private Graphics2D g22;
 
 
