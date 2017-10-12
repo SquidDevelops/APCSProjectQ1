@@ -9,13 +9,14 @@ import javax.swing.JComponent;
 
 public class VoteTest extends JComponent implements Runnable {
     private Elephant elephant = new Elephant(100, 300);
-    private Donkey donkey = new Donkey(100,300);
+    private Donkey donkey = new Donkey(100, 300);
     private Graphics2D g22;
 
 
-    public VoteTest(){
+    public VoteTest() {
         start();
     }
+
     public void paintComponent(Graphics g) {
         g22 = (Graphics2D) g;
 
@@ -27,7 +28,7 @@ public class VoteTest extends JComponent implements Runnable {
     public void run() {
         while (isVisible()) {
             elephant.translate(g22, VoteViewer.voteAPI);
-//            /donkey.translate(g22, VoteViewer.voteAPI);
+            donkey.translate(g22, VoteViewer.voteAPI);
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
@@ -37,14 +38,11 @@ public class VoteTest extends JComponent implements Runnable {
         }
     }
 
-    private void start()
-    {
-        while(!isVisible())
-        {
-            try
-            {
+    private void start() {
+        while (!isVisible()) {
+            try {
                 Thread.sleep(1);
-            } catch(InterruptedException e) {
+            } catch (InterruptedException e) {
                 System.exit(1);
             }
         }
