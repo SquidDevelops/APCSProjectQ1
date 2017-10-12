@@ -84,7 +84,7 @@ public class Elephant {
         g2.setColor(Color.RED);
 
         // Draw text
-        //g2.drawString("Republicans", 35, 50);
+        g2.drawString("Republicans", xLeft + 35,yTop + 50);
 
         // Draw legs
         leg2 = new Line2D.Double(xLeft + 10, yTop + 120, xLeft + 40, yTop + 120);
